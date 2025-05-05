@@ -1,0 +1,696 @@
+body{
+  font-family:initial !important;
+}
+ h1,h2,h3,h4,h5,h6{
+  font-family: 'Inter', sans-serif !important;
+  /* font-weight: 600; */
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+p{
+  font-family: 'Arial', sans-serif;
+}
+
+/* navbar */
+.rotate-animation {
+  animation: rotate360 0.7s ease;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Show submenu on hover */
+#servicesDropdown li:hover > ul {
+display: block;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+/* Submenu will appear below the main item in mobile */
+#servicesDropdown li > ul {
+    left: 0;
+    top: 100%;
+}
+
+/* Make the main dropdown items full width for mobile */
+#servicesDropdown li a {
+    width: 100%;
+}
+
+/* Adjust the submenu width for mobile */
+#servicesDropdown li ul {
+    min-width: 100%;
+}
+}
+
+/* For larger screens (desktops/tablets) */
+@media (min-width: 769px) {
+#servicesDropdown li ul {
+    min-width: 200px;
+}
+}
+
+
+
+  .about-hero {
+    background-image: url('/photos/closeup-shot-wooden-white-entrance-steps-beautiful-wooden-house.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* small screen padding */
+    text-align: center;
+  }
+  
+  .about-overlay h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Optional smooth fade-in effect */
+  .about-overlay h1 {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+    
+
+
+
+
+
+
+/* WHO WE ARE Section */
+#who-we-are {
+  padding: 80px 20px;
+  background: #fafafa; /* Lighter and fresher background */
+  font-family: "Roboto", sans-serif; /* Modern font */
+  color: #333;
+}
+
+.who-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center align content on all devices */
+}
+
+/* Fancy Left Frame */
+.fancy-frame {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f0f0, #ffffff); /* Softer gradient */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12); /* Soft shadow */
+  transition: transform 0.3s ease;
+}
+
+.fancy-frame:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.fancy-frame img {
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  transition: transform 0.3s ease;
+}
+
+.fancy-frame img:hover {
+  transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Decorative Circle Background */
+.circle-bg {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  background: #a7a4a4;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* Right Content */
+.who-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.who-right h2 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  color: #000000; /* Darker color for heading */
+  font-weight: bold;
+  text-align: start;
+}
+
+.who-right p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: start; /* Align text left for larger devices */
+  padding: 0px; /* Add padding for text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .who-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .who-right h2 {
+    font-size: 2.2rem;
+  }
+
+  .who-right p {
+    font-size: 1.1rem;
+    padding: 0 20px; /* More padding on smaller screens */
+  }
+
+  .fancy-frame {
+    padding: 20px;
+  }
+
+  .circle-bg {
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+
+
+/* Our Products */
+#our-products {
+  /* background: linear-gradient(to bottom, #ff4b5c, #2c3e50);  */
+  background-color: lightgray;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#our-products .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#our-products h2 {
+  font-size: 2.8rem;
+  color: #252525;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  text-align: center;
+  position: relative;
+
+  /* Added for same height & alignment */
+  height: 150px; /* You can adjust this value */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.product-card i {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #2c3e50; /* Blue color for icons */
+}
+
+.product-card p {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  background: #354ca1b6;  /* Red background on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.product-card:hover i {
+  color: #ffffff; /* Change icon color on hover */
+}
+
+@media (max-width: 768px) {
+  #our-products h2 {
+    font-size: 2.2rem;
+  }
+
+  .product-card p {
+    font-size: 0.95rem;
+  }
+
+  .product-card {
+    padding: 25px 15px;
+  }
+  .product-card {
+    height: auto; /* or a smaller fixed height if you prefer */
+  }
+}
+
+
+
+
+
+/* client deatils */
+
+#clients {
+  padding: 60px 20px 70px;
+  text-align: center;
+  overflow: hidden;
+  /* margin-top: 10px; */
+}
+
+.clients-heading {
+  font-size: 2.8rem;
+  color: #252525;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+  font-family: 'Inter', sans-serif !important;
+  /* font-weight: 600; */
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  position: relative;
+  display: inline-block;
+}
+
+/* .clients-heading::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4b2b,#252525, #0004ff);
+  left: 20%;
+  bottom: -8px;
+  border-radius: 4px;
+} */
+/* === CLIENTS SECTION === */
+.clients-heading {
+  font-size: 2.8rem;
+  color: #252525;
+  margin-bottom: 10px;
+  font-weight: 600;
+  position: relative;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 30px 0;
+  background: #f8f8f8;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 100px;
+  animation: scroll 30s linear infinite;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  text-align: center;
+}
+
+.logo-box img {
+  height: 80px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.1);
+}
+
+.logo-box p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .carousel-track {
+    gap: 60px;
+    animation-duration: 25s;
+  }
+
+  .logo-box img {
+    height: 60px;
+    max-width: 90px;
+  }
+
+  .logo-box p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-track {
+    gap: 80px;
+    animation-duration: 20s;
+  }
+
+  .logo-box img {
+    height: 50px;
+    max-width: 70px;
+  }
+
+  .logo-box p {
+    font-size: 11px;
+  }
+}
+
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .clients-heading {
+    font-size: 2rem;
+  }
+
+  .carousel-track {
+    gap: 100px;
+  }
+
+  .carousel-track span {
+    font-size: 1.2rem;
+    /* padding: 8px 10px; */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* back-to-top */
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  background-color: #1c226c;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+  background-color: #2c4cc1;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+
+  .back-to-top {
+    position: fixed;
+    bottom: 17px;
+    right: 1px;
+    background-color: #1c226c;
+    color: white;
+    padding: 7px 11px;
+    border-radius: 50%;
+    font-size: 15px;
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.counter-section {
+  background-color: #061e5b; /* Green background */
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.counter-box {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+}
+
+.counter-box h2 {
+  font-size: 3rem;
+  /* font-weight: 700; */
+  margin-bottom: 10px;
+}
+
+.counter-box p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .divider {
+    display: none;
+  }
+
+  .counter-container {
+    flex-direction: column;
+  }
+
+  .counter-box {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .counter-box:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+
+
+/* footer */
+
+/* 1200px to 700px responsiveness */
+@media (max-width: 1280px) and (min-width: 700px) {
+  footer .container {
+    gap: 30px;
+  }
+
+  footer .container > div {
+    flex: 1 1 40%;
+    max-width: 40%;
+    text-align: center;
+  }
+
+  footer .container > div:first-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* 700px and below (mobile view) */
+@media (max-width: 699px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer .container > div {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* whatsapp */
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 90px;
+  right: 5px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.wa-circle {
+  background-color: #25D366;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect (only for devices that support hover) */
+@media (hover: hover) {
+  .wa-circle:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Responsive size tweaks for smaller screens */
+@media (max-width: 768px) {
+  .wa-circle {
+    padding: 9px;
+  }
+
+  .wa-circle img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp-button {
+    bottom: 60px;
+    right: 0px;
+  }
+}
+
+/* Existing styles remain the same */
+
+/* Shake Animation */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Apply on hover */
+.wa-circle:hover .shake-icon {
+  animation: shake 0.5s ease-in-out;
+}
+

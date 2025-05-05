@@ -1,0 +1,432 @@
+body{
+  font-family:Serif !important;
+    /* font-family: 'Poppins', sans-serif; */
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Inter', sans-serif;
+
+}
+p{
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* navbar */
+.rotate-animation {
+  animation: rotate360 0.7s ease;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Show submenu on hover */
+#servicesDropdown li:hover > ul {
+display: block;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+/* Submenu will appear below the main item in mobile */
+#servicesDropdown li > ul {
+    left: 0;
+    top: 100%;
+}
+
+/* Make the main dropdown items full width for mobile */
+#servicesDropdown li a {
+    width: 100%;
+}
+
+/* Adjust the submenu width for mobile */
+#servicesDropdown li ul {
+    min-width: 100%;
+}
+}
+
+/* For larger screens (desktops/tablets) */
+@media (min-width: 769px) {
+#servicesDropdown li ul {
+    min-width: 200px;
+}
+}
+
+
+
+
+  .about-hero {
+    background-image: url('/photos/empty-hallway-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* small screen padding */
+    text-align: center;
+  }
+  
+  .about-overlay h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Optional smooth fade-in effect */
+  .about-overlay h1 {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+    
+
+
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card_image {
+  width: 100%;
+  height: 200px; /* Set min or fixed height */
+  overflow: hidden;
+  
+}
+
+.image-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card_content {
+  min-height: fit-content;
+}
+
+
+.btn {
+  color: #ffffff;
+  padding: 0.4rem 0.6rem; /* Reduced padding */
+  font-size: 13px;         /* Smaller font */
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: inline-block;   /* So width is not 100% anymore */
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent; /* Same as before */
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12); /* Light hover effect */
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 480px; /* or any value based on your content */
+
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+  border-radius: 20px !important;
+} 
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background-color: rgba(189, 78, 78, 0.607);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+.extra_text {
+  display: none;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.card_btn.active + .extra_text {
+  display: block;
+}
+
+
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.card_image img {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+/* 1200px to 700px responsiveness */
+@media (max-width: 1280px) and (min-width: 700px) {
+  footer .container {
+    gap: 30px;
+  }
+
+  footer .container > div {
+    flex: 1 1 40%;
+    max-width: 40%;
+    text-align: center;
+  }
+
+  footer .container > div:first-child {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* 700px and below (mobile view) */
+@media (max-width: 699px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer .container > div {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* back-to-top */
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  background-color: #1c226c;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+  background-color: #2c4cc1;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+
+  .back-to-top {
+    position: fixed;
+    bottom: 17px;
+    right: 2px;
+    background-color: #1c226c;
+    color: white;
+    padding: 7px 11px;
+    border-radius: 50%;
+    font-size: 15px;
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+  
+}
+
+
+
+
+
+/* whatsapp */
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 90px;
+  right: 5px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.wa-circle {
+  background-color: #25D366;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect (only for devices that support hover) */
+@media (hover: hover) {
+  .wa-circle:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Responsive size tweaks for smaller screens */
+@media (max-width: 768px) {
+  .wa-circle {
+    padding: 9px;
+  }
+
+  .wa-circle img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .whatsapp-button {
+    bottom: 60px;
+    right: 0px;
+  }
+}
+
+/* Existing styles remain the same */
+
+/* Shake Animation */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Apply on hover */
+.wa-circle:hover .shake-icon {
+  animation: shake 0.5s ease-in-out;
+}
+
