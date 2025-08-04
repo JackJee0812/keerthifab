@@ -108,17 +108,18 @@ p{
   
   .hero-content button {
     padding: 12px 28px;
-    background-color: #00f2fe;
+    background-color: #17295b;
     border: none;
     border-radius: 10px;
-    color: #000;
+    color: #eeeeee;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
   }
   
   .hero-content button:hover {
-    background-color: #4facfe;
+    background-color: rgb(255, 255, 255);
+    color: black;
   }
   
   /* Responsive Breakpoints */
@@ -687,7 +688,7 @@ p{
 
 /* Section Styling */
 .testimonial-section {
-  background: linear-gradient(135deg, #fdf1e3, #fef9f4);
+  /* background: linear-gradient(135deg, #d4d0cb, #e1dedc); */
   padding: 60px 20px;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -860,7 +861,7 @@ p{
   footer .container > div {
     flex: 1 1 40%;
     max-width: 40%;
-    text-align: center;
+    /* text-align: center; */
   }
 
   footer .container > div:first-child {
@@ -880,7 +881,7 @@ p{
   footer .container > div {
     flex: 1 1 100%;
     max-width: 100%;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 

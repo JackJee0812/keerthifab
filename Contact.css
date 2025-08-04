@@ -117,7 +117,7 @@ p{
   
   .info-card i {
     font-size: 22px;
-    color: #001aff;
+    color: #1e3b8a;
     margin-right: 15px;
   }
   
@@ -139,7 +139,7 @@ p{
   }
   
   .social-icons a:hover {
-    color: #001aff;
+    color: #17295b;
   }
   
   .contact-form h3 {
@@ -161,7 +161,7 @@ p{
   .contact-form button {
     padding: 12px;
     width: 100%;
-    background-color: #007bff;
+    /* background-color: #007bff; */
     color: white;
     font-size: 16px;
     border: none;
@@ -267,7 +267,7 @@ p{
   footer .container > div {
     flex: 1 1 40%;
     max-width: 40%;
-    text-align: center;
+    /* text-align: center; */
   }
 
   footer .container > div:first-child {
@@ -287,7 +287,7 @@ p{
   footer .container > div {
     flex: 1 1 100%;
     max-width: 100%;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 

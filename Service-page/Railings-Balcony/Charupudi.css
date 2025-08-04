@@ -173,7 +173,7 @@ p{
   footer .container > div {
     flex: 1 1 40%;
     max-width: 40%;
-    text-align: center;
+    /* text-align: center; */
   }
 
   footer .container > div:first-child {
@@ -193,7 +193,7 @@ p{
   footer .container > div {
     flex: 1 1 100%;
     max-width: 100%;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 
